@@ -1,6 +1,15 @@
-#include <stdio.h>
+#include <locale.h>
+#include <ncurses.h>
 
 int main() {
-    printf("Hello, world!");
+    setlocale(LC_ALL, "");
+
+    initscr();
+    printw("Hello World");
+    refresh();
+    getch();
+
+    endwin();
+
     return 0;
 }
